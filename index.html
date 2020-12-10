@@ -1,0 +1,24 @@
+---
+layout: page
+title: Clases impartidas
+icon: fas fa-chalkboard-teacher
+---
+
+{% assign today_date = 'now' | date: '%s' %}
+
+<div class="posts">
+  {% for post in site.posts %}
+    {% assign post_date = post.class_date | date: '%s' %}
+    {% if post_date < today_date %}
+      <article class="post">
+
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+        <div class="entry">
+          {{ post.excerpt }}
+        </div>
+        
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,21 @@
+---
+title: Temario
+icon: fas fa-book
+layout: page
+---
+
+{% assign today_date = 'now' | date: "%d-%m-%Y" %}
+
+<div class="temario">
+En esta página encontrará el temario que se impartirá a lo largo del curso.
+
+  <ul class="fa-ul">
+    {% for tema in site.temas %}
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        <b>Tema {{ tema.my_order | plus:1 }} - <a href="{{ site.baseurl }}{{ tema.url }}">{{ tema.name }}</a></b>
+     </li>
+
+    {% endfor %}
+  </ul>
+</div>

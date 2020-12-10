@@ -1,0 +1,28 @@
+---
+title: Lista de tareas
+icon: fas fa-tasks
+layout: page
+---
+
+{% assign today_date = 'now' | date: '%s' %}
+
+<div class="tareas">
+En esta página encontrará las tareas marcadas y su fecha de entrega. En <b style="color: green;">verde</b> puede ver las tareas que aún está a tiempo de entregar. En <b style="color: red;">rojo</b>, aquellas cuya fecha de entrega ya pasó.
+
+  <ul class="fa-ul">
+    {% for tarea in site.tareas %}
+      {% assign deadline = tarea.deadline | date: '%s' %}
+
+      {% if tarea.visible %}
+        <li><i class="fa-li fa fa-check"></i><b><a href="{{ site.baseurl }}{{ tarea.url }}">{{ tarea.name }}</a></b> - Entrega: 
+        {% if today_date > deadline %}
+          <b style="color: red;">{{ tarea.deadline }}</b>
+        {% else %}
+          <b style="color: green;">{{ tarea.deadline }}</b>
+        {% endif %}
+        </li>
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+</div>
