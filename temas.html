@@ -13,7 +13,7 @@ En esta página encontrará el temario que se impartirá a lo largo del curso.
     {% for tema in site.temas %}
       <li>
         <i class="fa-li fa fa-check"></i>
-        <b>Tema {{ tema.my_order | plus:1 }} - <a href="{{ site.baseurl }}{{ tema.url }}">{{ tema.name }}</a></b>
+        <b>Tema {{ tema.my_order | plus:1 }} - <a href="{{ site.baseurl }}{{ tema.url }}">{{ tema.title }}</a></b>
      </li>
 
     {% endfor %}

@@ -1,6 +1,6 @@
 ---
-layout: tarea
-name: Aprende algunos conceptos de HTML y CSS
+layout: post
+title: Aprende algunos conceptos de HTML y CSS
 visible: false
 deadline: 15-12-2020
 my_order: 2

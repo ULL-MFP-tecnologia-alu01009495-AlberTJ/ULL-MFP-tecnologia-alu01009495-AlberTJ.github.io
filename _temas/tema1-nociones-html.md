@@ -1,5 +1,6 @@
 ---
-name: Nociones de HTML
+layout: post
+title: Nociones de HTML
 visible: true
 my_order: 1
 ---

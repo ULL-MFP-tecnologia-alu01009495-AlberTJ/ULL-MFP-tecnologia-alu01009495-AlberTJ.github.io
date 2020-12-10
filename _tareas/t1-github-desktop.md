@@ -1,6 +1,6 @@
 ---
-layout: tarea
-name: Uso de GitHub Desktop
+layout: post
+title: Uso de GitHub Desktop
 visible: true
 deadline: 03-12-2020
 my_order: 1

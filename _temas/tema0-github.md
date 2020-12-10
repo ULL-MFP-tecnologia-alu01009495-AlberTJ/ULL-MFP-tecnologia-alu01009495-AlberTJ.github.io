@@ -1,5 +1,6 @@
 ---
-name: Control de versiones con GitHub
+layout: post
+title: Control de versiones con GitHub
 visible: true
 my_order: 0
 ---

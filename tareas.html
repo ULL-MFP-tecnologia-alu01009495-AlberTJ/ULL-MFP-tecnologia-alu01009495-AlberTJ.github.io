@@ -14,7 +14,7 @@ En esta página encontrará las tareas marcadas y su fecha de entrega. En <b sty
       {% assign deadline = tarea.deadline | date: '%s' %}
 
       {% if tarea.visible %}
-        <li><i class="fa-li fa fa-check"></i><b><a href="{{ site.baseurl }}{{ tarea.url }}">{{ tarea.name }}</a></b> - Entrega: 
+        <li><i class="fa-li fa fa-check"></i><b><a href="{{ site.baseurl }}{{ tarea.url }}">{{ tarea.title }}</a></b> - Entrega: 
         {% if today_date > deadline %}
           <b style="color: red;">{{ tarea.deadline }}</b>
         {% else %}

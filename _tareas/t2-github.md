@@ -1,6 +1,6 @@
 ---
-layout: tarea
-name: Familiarizarte con GitHub
+layout: post
+title: Familiarizarte con GitHub
 visible: true
 deadline: 30-12-2020
 my_order: 0
