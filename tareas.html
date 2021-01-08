@@ -20,3 +20,17 @@ En esta página encontrará las tareas marcadas y su fecha de entrega. En <b sty
     {% endfor %}
   </ul>
 </div>
+
+<script>
+  var today_date = new Date(Date.now());
+  Array.from(document.getElementsByClassName('deadline')).forEach((el) => {
+    date_components = el.textContent.split('-');
+    day = date_components[0];
+    month = date_components[1];
+    year = date_components[2];
+
+    task_date = new Date(year, month, day);
+    
+    el.style.color = today_date >= task_date ? 'red' : 'green'
+});
+</script>
